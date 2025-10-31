@@ -13,7 +13,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const navItems = [
-        { label: 'Home', path: '/home' },
+        { label: 'Home', path: '/' },
         { label: 'Progetti', path: '/projects' },
         { label: 'Chi Sono', path: '/aboutme' },
         { label: 'Contatti', path: '/contacts' },
@@ -25,7 +25,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
 
                 {/* LOGO */}
                 <NavLink to="/" className="text-xl font-bold tracking-widest text-cyan-400 hover:text-cyan-300 transition duration-300 neon-text">
-                    {sitename || 'V-DEV'}
+                    {sitename || 'VDB'}
                 </NavLink>
 
                 <button
