@@ -8,10 +8,10 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ sitename }) => {
     const navItems = [
-        { name: 'Home', to: 'home' },
-        { name: 'Progetti', to: 'projects' },
-        { name: 'Chi sono', to: 'aboutme' },
-        { name: 'Contatti', to: 'contacts' },
+        { label: 'Home', path: '/home' },
+        { label: 'Progetti', path: '/projects' },
+        { label: 'Chi sono', path: '/aboutme' },
+        { label: 'Contatti', path: '/contacts' },
     ];
     return (
         <header>
@@ -22,8 +22,8 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
 
                 <nav>
                     {navItems.map((item) => (
-                        <NavLink className="pr-2" key={item.name} to={item.to} >
-                            {item.name}
+                        <NavLink className="pr-2" key={item.label} to={item.path} >
+                            {item.label}
                         </NavLink>
                     ))}
                 </nav>
