@@ -9,9 +9,9 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ sitename }) => {
     const navItems = [
         { name: 'Home', to: 'home' },
-        { name: 'Progetti', to: 'progetti' },
-        { name: 'Chi sono', to: 'chisono' },
-        { name: 'Contatti', to: 'contatti' },
+        { name: 'Progetti', to: 'projects' },
+        { name: 'Chi sono', to: 'aboutme' },
+        { name: 'Contatti', to: 'contacts' },
     ];
     return (
         <header>

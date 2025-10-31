@@ -1,16 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from '../src/components/Header';
+import Home from './pages/Home';
+import AboutPage from './pages/AboutPage';
+import ProjectsPage from './pages/ProjectsPage';
+import ContactsPage from './pages/ContactsPage';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       <Header sitename="Valerio Di Biagio" />
       <Routes>
-        <Route path='/' />
-        <Route path='project' />
-        <Route path='project/:slug' />
-        <Route path='aboutme' />
-        <Route path='contacts' />
+        <Route path='home' element={<Home />} />
+        <Route path='projects' element={<ProjectsPage />} />
+        <Route path='projects/:slug' />
+        <Route path='aboutme' element={<AboutPage />} />
+        <Route path='contacts' element={<ContactsPage />} />
       </Routes>
     </BrowserRouter>
   );
