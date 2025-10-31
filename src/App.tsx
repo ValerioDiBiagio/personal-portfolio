@@ -8,13 +8,13 @@ import ContactsPage from './pages/ContactsPage';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      <Header sitename="Valerio Di Biagio" />
+      <Header sitename="VDB" />
       <Routes>
-        <Route path='home' element={<Home />} />
-        <Route path='projects' element={<ProjectsPage />} />
-        <Route path='projects/:slug' />
-        <Route path='aboutme' element={<AboutPage />} />
-        <Route path='contacts' element={<ContactsPage />} />
+        <Route path='/home' element={<Home />} />
+        <Route path='/projects' element={<ProjectsPage />} />
+        <Route path='/projects/:slug' />
+        <Route path='/aboutme' element={<AboutPage />} />
+        <Route path='/contacts' element={<ContactsPage />} />
       </Routes>
     </BrowserRouter>
   );
