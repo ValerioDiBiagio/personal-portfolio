@@ -1,11 +1,19 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from '../src/components/Header';
 
-
-function App() {
-
-
+const App: React.FC = () => {
   return (
-    <h1>Ciao!</h1>
-  )
-}
+    <BrowserRouter>
+      <Header sitename="Valerio Di Biagio" />
+      <Routes>
+        <Route path='/' />
+        <Route path='project' />
+        <Route path='project/:slug' />
+        <Route path='aboutme' />
+        <Route path='contacts' />
+      </Routes>
+    </BrowserRouter>
+  );
+};
 
-export default App
+export default App;
