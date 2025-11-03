@@ -69,7 +69,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
 
             {/* Mobile */}
             <div
-                className={`md:hidden absolute top-16 left-0 w-full bg-[#1d1f21] transition-all duration-300 overflow-hidden ${isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
+                className={`md:hidden absolute top-16 left-0 w-full bg-[#1d1f21] transition-all duration-300 overflow-hidden ${isOpen ? 'opacity-100' : 'opacity-0'
                     }`}
                 onClick={() => setIsOpen(false)}
             >
