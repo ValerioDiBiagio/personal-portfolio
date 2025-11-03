@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
                             key={item.label}
                             to={item.path}
                             className={({ isActive }) =>
-                                `text-base font-medium transition duration-300 uppercase tracking-wider 
+                                `text-base font-medium transition duration-300 uppercase tracking-wider
                                 ${isActive
                                     ? 'text-lime-300 border-b-2 border-lime-300'
                                     : 'text-gray-300 hover:text-cyan-400 neon-hover text-shadow'
@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
                     }`}
                 onClick={() => setIsOpen(false)}
             >
-                <nav className="flex flex-col p-4 space-y-4">
+                <nav className="flex flex-col p-4 space-y-4 items-center">
                     {navItems.map((item) => (
                         <NavLink
                             key={item.label}

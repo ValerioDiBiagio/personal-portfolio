@@ -3,3 +3,13 @@
 #root {
     font-family: "Exo 2", sans-serif;
 }
+
+body:hover .city-container .city-image {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px #00FFFF);
+}
+
+.page-content {
+    position: relative;
+    z-index: 10;
+}

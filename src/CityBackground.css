@@ -1,0 +1,27 @@
+.city-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transition: transform 0.5s ease-out, filter 0.3s;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 255, 0.5));
+    transform: scale(1.001);
+}
+
+.city-container.hovered .city-image {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 15px #00FFFF);
+}
