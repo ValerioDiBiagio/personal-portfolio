@@ -9,26 +9,32 @@ type HeroSectionProps = {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ name, title, subtitle, description }) => {
     return (
-        <section className="h-screen flex justify-center items-center p-4 sm:p-8 text-white">
+        <section className="flex justify-center flex-col p-4 sm:p-8 text-white items-center">
+
+            <figure className='image-container flex justify-center'>
+                <img className='w-120' src="/image/valeriodb.png" alt="Foto profilo Valerio" />
+                <img className='w-120 hover-image' src="/image/valeriodbsmile.png" alt="Foto profilo Valerio sorriso" />
+            </figure>
 
             <div
                 className="
+                    mt-3
                     max-w-xl md:max-w-md
                     w-full
                     p-0.5 md:p-1              
                     rounded-lg md:rounded-xl
-                    bg-gradient-to-r from-lime-300 via-green-300 to-lime-300 
-                    transform transition-all duration-300">
+                    border border-lime-500 border-2
+                    ">
 
                 <div
                     className="
                         flex flex-col md:flex-row
                         gap-4 md:gap-8
                         p-6 md:p-10
-                        bg-[#1d1f21] 
                         text-white 
                         rounded-lg md:rounded-xl 
-                        border border-transparent ">
+                        border border-transparent "
+                    style={{ backgroundColor: 'rgba(29, 31, 33, 0.9)' }}>
 
                     <div className="flex-1 text-center">
                         <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold mb-1 tracking-tight leading-snug text-gray-300">
