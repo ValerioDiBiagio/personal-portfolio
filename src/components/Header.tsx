@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
-interface HeaderProps {
+type HeaderProps = {
     sitename: string;
 }
 
