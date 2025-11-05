@@ -52,7 +52,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, subtitle, descri
                             to="/aboutme"
                             className='
                                  inline-block
-                                 mb-2
+                                 mb-2 
                                  mt-3 
                                  px-5 py-2 
                                  transition duration-300

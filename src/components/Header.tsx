@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 
+
 type HeaderProps = {
     sitename: string;
 }
@@ -24,8 +25,25 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
 
                 {/* LOGO */}
-                <NavLink to="/" className="text-xl font-bold tracking-widest text-cyan-400 hover:text-cyan-300 transition duration-300 neon-text">
-                    {sitename || 'VDB'}
+                <NavLink
+                    to="/"
+                    className="
+                      text-xl font-bold tracking-widest 
+                      text-cyan-400 hover:text-cyan-300 
+                      transition duration-300 neon-text
+                      flex items-center space-x-2 
+                    "
+                >
+                    <img
+                        src='./image/logovdb.png'
+                        alt={sitename || 'Logo VDB'}
+                        className="
+                          h-30 w-30 
+                          transform transition-all duration-300 ease-in-out
+                          hover:filter 
+                          hover:drop-shadow-[0_0_15px_rgba(0,255,255,0.7)] 
+                        "
+                    />
                 </NavLink>
 
                 <button
