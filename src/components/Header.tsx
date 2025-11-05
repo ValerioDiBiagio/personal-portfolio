@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
                 </NavLink>
 
                 <button
-                    className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-300  transition duration-300 z-50 group"
+                    className="md:hidden text-3xl rounded-md focus:outline-none transition duration-300 z-50 group"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-expanded={isOpen}
                     aria-label="Toggle navigation"
