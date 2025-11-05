@@ -4,7 +4,7 @@ import HeroSection from "../components/HeroSection";
 const Home: React.FC = () => {
     return (
         <div>
-            <HeroSection name='Valerio Di Biagio' title='Front-end Developer' subtitle='' description='' />
+            <HeroSection name='Benvenuto, sono Valerio!' title='Front-end Developer | UX/UI Focused' subtitle='' description="Junior Front-end Developer con formazione Fullstack e specializzazione UX/UI. Trasferisco nel codice un’attenzione unica al dettaglio per realizzare interfacce robuste e visivamente accattivanti." />
         </div>
     )
 }
