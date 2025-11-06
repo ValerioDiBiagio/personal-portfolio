@@ -63,7 +63,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, subtitle, descri
                                     shadow-lg
                                     text-sm
                                     bg-gray-300 text-gray-900
-                                    hover:bg-cyan-400
+                                    hover:bg-cyan-500
                                 "
                             >
                                 SCOPRI DI PIÙ
