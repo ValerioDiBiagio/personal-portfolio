@@ -44,3 +44,8 @@ body:hover .city-container .city-image {
 .image-container:hover .hover-image {
     opacity: 1;
 }
+
+img.fade-bottom {
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}

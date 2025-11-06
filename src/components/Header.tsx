@@ -21,7 +21,8 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
     ];
 
     return (
-        <header className="bg-[#1d1f21] shadow-md fixed w-full top-0 z-50 border-b border-gray-700/50">
+        <header className="fixed top-0 w-full z-50 shadow-md bg-[linear-gradient(to_bottom,_#1a1a1a_0%,_black_50%)]">
+
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
 
                 {/* LOGO */}
