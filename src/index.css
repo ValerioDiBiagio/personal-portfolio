@@ -2,6 +2,8 @@
 
 #root {
     font-family: "Exo 2", sans-serif;
+    background-color: #000000;
+
 }
 
 body:hover .city-container .city-image {
@@ -13,6 +15,13 @@ body:hover .city-container .city-image {
     position: relative;
     z-index: 10;
 }
+
+.fade-contenitor {
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 65%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 65%, transparent 100%);
+
+}
+
 
 .image-container {
     position: relative;
@@ -48,4 +57,18 @@ body:hover .city-container .city-image {
 img.fade-bottom {
     mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.scroll-animation {
+    animation: scroll 25s linear infinite;
 }

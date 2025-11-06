@@ -24,13 +24,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, subtitle, descri
 
                 <div
                     className="
-                        mt-3
+                        mt-2
                         max-w-xl md:max-w-4xl
                         w-full            
                         rounded-lg md:rounded-xl
-                        
-                        
-                    "
+                        "
                 >
                     <div
                         className="

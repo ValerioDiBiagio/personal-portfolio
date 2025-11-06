@@ -23,7 +23,7 @@ const HeroBackground: React.FC = () => {
 
         return Array.from({ length: 80 }).map((_, i) => ({
             id: i,
-            size: Math.random() * 5 + 2, // 2–7 px
+            size: Math.random() * 5 + 2,
             x: Math.random() * 100,
             y: Math.random() * 100,
             color: colors[Math.floor(Math.random() * colors.length)],
@@ -33,7 +33,7 @@ const HeroBackground: React.FC = () => {
     }, []);
 
     return (
-        <div className="absolute inset-0 overflow-hidden bg-black">
+        <div className="fade-contenitor absolute inset-0 overflow-hidden bg-black">
             {/* leggero bagliore centrale per profondità */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(50,50,50,0.25),rgba(0,0,0,1))]" />
 
