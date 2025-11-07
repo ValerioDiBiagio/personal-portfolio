@@ -5,9 +5,7 @@ import BannerLogos from "../components/BannerLogos";
 const Home: React.FC = () => {
     return (
         <>
-            <div>
-                <HeroSection name='Benvenuto, sono Valerio!' title='Front-end Developer | UX/UI Focused' subtitle='' description="Junior Front-end Developer con formazione Fullstack e specializzazione UX/UI. Trasferisco nel codice un’attenzione unica al dettaglio per realizzare interfacce robuste e visivamente accattivanti." />
-            </div>
+            <HeroSection name='Benvenuto, sono Valerio!' title='Front-end Developer | UX/UI Focused' subtitle='' description="Junior Front-end Developer con formazione Fullstack e specializzazione UX/UI. Trasferisco nel codice un’attenzione unica al dettaglio per realizzare interfacce robuste e visivamente accattivanti." />
             <BannerLogos />
         </>
 

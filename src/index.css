@@ -59,16 +59,22 @@ img.fade-bottom {
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
+.scroll-container {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.scroll-content {
+    display: flex;
+}
+
 @keyframes scroll {
-    0% {
+    from {
         transform: translateX(0);
     }
 
-    100% {
+    to {
         transform: translateX(-50%);
     }
-}
-
-.scroll-animation {
-    animation: scroll 25s linear infinite;
 }
