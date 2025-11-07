@@ -5,11 +5,10 @@ import HeroBackground from './HeroBackground';
 type HeroSectionProps = {
     name: string;
     title: string;
-    subtitle: string;
     description: string;
 };
 
-const HeroSection: React.FC<HeroSectionProps> = ({ name, title, subtitle, description }) => {
+const HeroSection: React.FC<HeroSectionProps> = ({ name, title, description }) => {
     return (
         <section className="relative flex justify-center flex-col p-4 md:p-4 text-white items-center overflow-hidden">
 
@@ -45,9 +44,6 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, subtitle, descri
                             <h2 className="text-xl sm:text-2xl md:text-2xl font-semibold mb-2 text-gray-300">
                                 {title}
                             </h2>
-                            <h3 className="text-base md:text-lg text-gray-400 mb-2">
-                                {subtitle}
-                            </h3>
                             <p className="text-sm md:text-base font-light tracking-wide italic mb-0 md:mb-4">
                                 {description}
                             </p>
