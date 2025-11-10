@@ -21,7 +21,7 @@ const logos = [
 const BannerLogos: React.FC = () => {
     return (
         <div className="flex flex-col justify-center items-center space-y-6">
-            <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-1">
+            <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-5">
                 Le mie competenze tecniche:
             </h2>
 
