@@ -4,6 +4,7 @@ import AboutPage from './pages/AboutPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactsPage from './pages/ContactsPage';
 import DefaultLayout from './layouts/DefaultLayout';
+import ProjectsDetailsCard from './pages/ProjectsDetailsCard';
 
 const App: React.FC = () => {
   return (
@@ -12,7 +13,7 @@ const App: React.FC = () => {
         <Route element={<DefaultLayout />}>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<ProjectsPage />} />
-          <Route path='/projects/:slug' />
+          <Route path='/projects/:slug' element={<ProjectsDetailsCard />} />
           <Route path='/aboutme' element={<AboutPage />} />
           <Route path='/contacts' element={<ContactsPage />} />
         </Route>

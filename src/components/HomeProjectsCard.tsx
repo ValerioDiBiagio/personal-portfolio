@@ -4,11 +4,11 @@ import Tilt from "react-parallax-tilt";
 import { NavLink } from "react-router-dom";
 
 type Project = {
+    slug: string,
     title: string;
     category: string;
     description: string;
     image: string;
-    link: string;
 };
 
 interface HomeProjectsCardProps {
@@ -27,7 +27,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
     }, [projects.length, interval]);
 
     const project = projects[current];
-    const isExternal = project.link.startsWith("http");
+    const isExternal = project.slug.startsWith("http");
 
     const variants = {
         enter: (direction: number) => ({
@@ -113,7 +113,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
 
                                     {isExternal ? (
                                         <motion.a
-                                            href={project.link}
+                                            href={project.slug}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             whileHover={{ scale: 1.05 }}
@@ -124,7 +124,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                                     ) : (
                                         <motion.div whileHover={{ scale: 1.05 }}>
                                             <NavLink
-                                                to={project.link}
+                                                to={`/projects/${project.slug}`}
                                                 className="inline-block mb-2 mt-3 px-4 sm:px-6 py-2 sm:py-3 transition duration-300 font-bold rounded-full shadow-lg text-sm sm:text-base lg:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
                                             >
                                                 VEDI PROGETTO →
