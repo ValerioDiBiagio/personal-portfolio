@@ -4,7 +4,7 @@ import Tilt from "react-parallax-tilt";
 import { NavLink } from "react-router-dom";
 
 type Project = {
-    slug: string,
+    slug: string;
     title: string;
     category: string;
     description: string;
@@ -21,58 +21,34 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setCurrent(prev => (prev + 1) % projects.length);
+            setCurrent((prev) => (prev + 1) % projects.length);
         }, interval);
         return () => clearInterval(timer);
     }, [projects.length, interval]);
 
     const project = projects[current];
-    const isExternal = project.slug.startsWith("http");
 
     const variants = {
-        enter: (direction: number) => ({
-            x: direction > 0 ? 300 : -300,
-            opacity: 0,
-        }),
-        center: {
-            x: 0,
-            opacity: 1,
-        },
-        exit: (direction: number) => ({
-            x: direction > 0 ? -300 : 300,
-            opacity: 0,
-        }),
+        enter: { x: 300, opacity: 0 },
+        center: { x: 0, opacity: 1 },
+        exit: { x: -300, opacity: 0 },
     };
-
-    const direction = 1;
 
     return (
         <div className="relative pb-10 bg-black">
-            {/* Titolo */}
             <div className="w-full py-15 text-center">
                 <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold">
                     I miei progetti:
                 </h2>
             </div>
 
-            {/* Card Carousel */}
             <div className="flex justify-center items-center overflow-visible mt-10 py-3 relative">
-                {/* Glow sopra */}
-                <div className="absolute -top-10 left-0 right-0 h-24 rounded-3xl pointer-events-none
-                                bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400
-                                blur-3xl opacity-30 animate-pulse">
-                </div>
+                <div className="absolute -top-10 left-0 right-0 h-24 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30 pulse-slow" />
+                <div className="absolute -bottom-10 left-0 right-0 h-24 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30 pulse-slow" />
 
-                {/* Glow sotto */}
-                <div className="absolute -bottom-10 left-0 right-0 h-24 rounded-3xl pointer-events-none
-                                bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400
-                                blur-3xl opacity-30 animate-pulse">
-                </div>
-
-                <AnimatePresence custom={direction} mode="wait">
+                <AnimatePresence mode="wait">
                     <motion.div
                         key={project.title}
-                        custom={direction}
                         variants={variants}
                         initial="enter"
                         animate="center"
@@ -83,7 +59,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                         <Tilt
                             tiltMaxAngleX={10}
                             tiltMaxAngleY={10}
-                            glareEnable={true}
+                            glareEnable
                             glareMaxOpacity={0.2}
                             transitionSpeed={1500}
                             scale={1.03}
@@ -111,26 +87,14 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                                         {project.description}
                                     </p>
 
-                                    {isExternal ? (
-                                        <motion.a
-                                            href={project.slug}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            whileHover={{ scale: 1.05 }}
+                                    <motion.div whileHover={{ scale: 1.05 }}>
+                                        <NavLink
+                                            to={`/projects/${project.slug}`}
                                             className="inline-block mb-2 mt-3 px-4 sm:px-6 py-2 sm:py-3 transition duration-300 font-bold rounded-full shadow-lg text-sm sm:text-base lg:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
                                         >
-                                            Vedi progetto →
-                                        </motion.a>
-                                    ) : (
-                                        <motion.div whileHover={{ scale: 1.05 }}>
-                                            <NavLink
-                                                to={`/projects/${project.slug}`}
-                                                className="inline-block mb-2 mt-3 px-4 sm:px-6 py-2 sm:py-3 transition duration-300 font-bold rounded-full shadow-lg text-sm sm:text-base lg:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
-                                            >
-                                                VEDI PROGETTO →
-                                            </NavLink>
-                                        </motion.div>
-                                    )}
+                                            VEDI PROGETTO →
+                                        </NavLink>
+                                    </motion.div>
                                 </div>
                             </motion.div>
                         </Tilt>

@@ -78,3 +78,19 @@ img.fade-bottom {
         transform: translateX(-50%);
     }
 }
+
+@keyframes pulseSlow {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pulse-slow {
+    animation: pulseSlow 5s ease-in-out infinite;
+}
