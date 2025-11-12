@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
 
 const DefaultLayout: React.FC = () => {
     return (
@@ -12,6 +13,8 @@ const DefaultLayout: React.FC = () => {
                     <Outlet />
                 </div>
             </main>
+
+            <Footer />
         </>
     )
 }

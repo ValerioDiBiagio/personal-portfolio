@@ -29,7 +29,7 @@ const HomeContactSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
-                    className="text-gray-400 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl mb-10 leading-relaxed"
+                    className="text-gray-300 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl mb-10 leading-relaxed"
                 >
                     Trasformiamolo insieme in qualcosa di straordinario.
                     <br className="hidden sm:block" />
