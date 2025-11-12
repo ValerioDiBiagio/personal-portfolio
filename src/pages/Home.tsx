@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import BannerLogos from "../components/BannerLogos";
 import HomeProjectsCard from "../components/HomeProjectsCard";
 import featuredProjects from "../data/projects";
+import HomeContactSection from "../components/HomeContactSection";
 
 const Home: React.FC = () => {
 
@@ -17,6 +18,7 @@ const Home: React.FC = () => {
             <BannerLogos />
 
             <HomeProjectsCard projects={featuredProjects} interval={8000} />
+            <HomeContactSection />
 
         </>
     );

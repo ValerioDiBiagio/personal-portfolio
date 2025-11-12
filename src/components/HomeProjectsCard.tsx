@@ -53,9 +53,11 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
             >
-                {/* Glow top/bottom */}
-                <div className="absolute -top-10 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30 pulse-slow" />
-                <div className="absolute -bottom-30 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30 pulse-slow" />
+                {/* Glow superiore */}
+                <div className="absolute -top-10 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30" />
+
+                {/* Glow inferiore sfumato */}
+                <div className="absolute bottom-0 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-[90px] opacity-30 translate-y-10" />
 
                 {/* Pulsante sinistro */}
                 <motion.button
@@ -134,7 +136,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                 </AnimatePresence>
             </div>
 
-            {/* Bottone "i miei progetti" */}
+            {/* Bottone "I miei progetti" */}
             <div className="w-full flex justify-center mt-10">
                 <motion.div whileHover={{ scale: 1.05 }}>
                     <NavLink

@@ -49,18 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, description }) =
                             </p>
                             <NavLink
                                 to="/aboutme"
-                                className="
-                                    inline-block
-                                    mb-2 mt-3 
-                                    px-5 py-2 
-                                    transition duration-300
-                                    font-bold
-                                    rounded-full 
-                                    shadow-lg
-                                    text-sm
-                                    bg-gray-300 text-gray-900
-                                    hover:bg-cyan-500
-                                "
+                                className="inline-block px-6 sm:px-8 py-3 sm:py-4 transition duration-300 font-bold rounded-full shadow-lg text-base sm:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
                             >
                                 SCOPRI DI PIÙ
                             </NavLink>
