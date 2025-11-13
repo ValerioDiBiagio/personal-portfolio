@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Copyright */}
-            <div className="text-gray-300 text-sm text-center p-4">
+            <div className="text-gray-300 text-sm text-center p-4 italic">
                 &copy; {new Date().getFullYear()} Valerio Di Biagio. Tutti i diritti riservati.
             </div>
         </footer>
