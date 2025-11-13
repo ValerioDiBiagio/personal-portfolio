@@ -41,7 +41,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
     };
 
     return (
-        <div className="relative pb-16 bg-black">
+        <div className="relative pb-16 bg-black mt-20">
             <div className="w-full py-15 text-center">
                 <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold">
                     Progetti in evidenza:
@@ -114,10 +114,10 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                                     <h3 className="text-gray-300 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-3">
                                         {project.title}
                                     </h3>
-                                    <p className="text-gray-300 mb-3 text-sm sm:text-base md:text-lg lg:text-xl">
+                                    <p className="text-gray-300 mb-3 text-sm sm:text-base md:text-lg lg:text-2xl">
                                         {project.category}
                                     </p>
-                                    <p className="text-gray-300 mb-5 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                                    <p className="text-gray-300 mb-5 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed italic">
                                         {project.description}
                                     </p>
 
@@ -137,7 +137,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
             </div>
 
             {/* Bottone "I miei progetti" */}
-            <div className="w-full flex justify-center mt-10">
+            <div className="w-full flex justify-center mt-6">
                 <motion.div whileHover={{ scale: 1.05 }}>
                     <NavLink
                         to="/projects"

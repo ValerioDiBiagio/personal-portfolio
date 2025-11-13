@@ -11,17 +11,17 @@ const featuredProjects: Project[] = [
     {
         slug: "top-games",
         title: "Top Games",
-        category: "UX/UI Design",
+        category: "Full Stack Development",
         description:
-            "Un’app moderna per la gestione della mobilità urbana, con un’interfaccia intuitiva, dark mode e un design accessibile.",
+            "Progetto di gruppo per lo sviluppo di un e-commerce di videogiochi, con contributo sia al frontend che al backend.",
         image: "/image/topgames-hero.png"
     },
     {
         slug: "booroad",
         title: "BooRoad",
-        category: "UX/UI Design",
+        category: "Front-End Development",
         description:
-            "Un’app moderna per la gestione della mobilità urbana, con un’interfaccia intuitiva, dark mode e un design accessibile.",
+            "Sviluppo del frontend di un prototipo per la gestione di viaggiatori e viaggi con dati statici.",
         image: "/image/booroad-hero.png"
     },
     {
@@ -29,7 +29,7 @@ const featuredProjects: Project[] = [
         title: "Componente Header",
         category: "UX/UI Design",
         description:
-            "Un’app moderna per la gestione della mobilità urbana, con un’interfaccia intuitiva, dark mode e un design accessibile.",
+            "Sviluppo di un header UI component per un sito dedicato alla tecnologia.",
         image: "/image/header-light-desktop.png"
     },
 

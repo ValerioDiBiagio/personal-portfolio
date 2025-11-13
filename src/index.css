@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
+body,
+html,
 #root {
-    font-family: "Exo 2", sans-serif;
+    font-family: "Exo 2", sans-serif !important;
     background-color: #000000;
 
 }

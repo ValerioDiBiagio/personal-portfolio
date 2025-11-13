@@ -10,7 +10,7 @@ type HeroSectionProps = {
 
 const HeroSection: React.FC<HeroSectionProps> = ({ name, title, description }) => {
     return (
-        <section className="relative flex justify-center flex-col p-4 md:p-4 text-white items-center overflow-hidden">
+        <section className="relative flex justify-center flex-col p-4 md:p-4 text-white items-center overflow-hidden mt-15">
 
             <HeroBackground />
 
@@ -49,7 +49,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, description }) =
                             </p>
                             <NavLink
                                 to="/aboutme"
-                                className="inline-block px-6 sm:px-8 py-3 sm:py-4 transition duration-300 font-bold rounded-full shadow-lg text-base sm:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
+                                className="inline-block mt-4 sm:mt-2 px-6 sm:px-8 py-3 sm:py-4 transition duration-300 font-bold rounded-full shadow-lg text-base sm:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
                             >
                                 SCOPRI DI PIÙ
                             </NavLink>

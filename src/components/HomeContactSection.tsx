@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const HomeContactSection = () => {
     return (
-        <section className="fade-contenitor relative w-full py-10 bg-black text-center overflow-hidden">
+        <section className="fade-contenitor relative w-full py-10 bg-black text-center overflow-hidden mt-10 mb-15">
             <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -11,8 +11,7 @@ const HomeContactSection = () => {
                 viewport={{ once: true }}
                 className="relative z-10 flex flex-col items-center justify-center px-6"
             >
-                {/* Linea luminosa di separazione */}
-                <div className="w-70 h-[3px] bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 mx-auto mb-8"></div>
+
 
                 {/* Titolo con animazione elegante */}
                 <motion.h2
@@ -29,7 +28,7 @@ const HomeContactSection = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.8 }}
-                    className="text-gray-300 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl mb-10 leading-relaxed"
+                    className="text-gray-300 max-w-2xl text-sm sm:text-base md:text-lg lg:text-xl mb-10 leading-relaxed italic"
                 >
                     Trasformiamolo insieme in qualcosa di straordinario.
                     <br className="hidden sm:block" />
