@@ -97,7 +97,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                             glareMaxOpacity={0.2}
                             transitionSpeed={1500}
                             scale={1.03}
-                            className="rounded-3xl shadow-2xl overflow-hidden backdrop-blur-md"
+                            className="rounded-3xl overflow-hidden backdrop-blur-md"
                         >
                             <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.4 }}>
                                 <div className="overflow-hidden rounded-t-3xl">
