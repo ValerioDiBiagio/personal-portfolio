@@ -44,7 +44,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
         <div className="relative pb-16 bg-black mt-20">
             <div className="w-full py-15 text-center">
                 <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold">
-                    Progetti in evidenza:
+                    Progetti in evidenza
                 </h2>
             </div>
 
@@ -54,10 +54,10 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                 onMouseLeave={() => setIsPaused(false)}
             >
                 {/* Glow superiore */}
-                <div className="absolute -top-10 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30" />
+                <div className="absolute -top-10 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30 pulse-slow" />
 
                 {/* Glow inferiore sfumato */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-[90px] opacity-30 translate-y-10" />
+                <div className="absolute bottom-0 left-0 right-0 h-32 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-[90px] opacity-30 translate-y-10 pulse-slow" />
 
                 {/* Pulsante sinistro */}
                 <motion.button
@@ -141,7 +141,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                 <motion.div whileHover={{ scale: 1.05 }}>
                     <NavLink
                         to="/projects"
-                        className="inline-block px-6 sm:px-8 py-3 sm:py-4 transition duration-300 font-bold rounded-full shadow-lg text-base sm:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
+                        className="inline-block px-6 sm:px-8 py-3 sm:py-4 transition duration-300 font-bold rounded-full shadow-lg text-lg sm:text-2xl bg-gray-300 text-gray-900 hover:bg-cyan-500"
                     >
                         I MIEI PROGETTI
                     </NavLink>
