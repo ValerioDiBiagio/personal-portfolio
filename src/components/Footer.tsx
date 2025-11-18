@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
 
     return (
         <footer className=" bg-black relative z-10">
-            <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-4">
+            <div className="container flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-4">
                 {/* Logo / Brand */}
                 <NavLink
                     to="/"

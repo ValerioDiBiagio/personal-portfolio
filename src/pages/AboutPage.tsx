@@ -73,11 +73,11 @@ const AboutPage: React.FC = () => {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="w-full max-w-4xl p-8 shadow-xl flex flex-col items-center text-center relative"
             >
-                <h2 className="text-gray-300 text-5xl sm:text-5xl md:text-5xl font-semibold mb-15">Il mio percorso in breve</h2>
+                <h2 className="text-gray-300 text-3xl sm:text-5xl md:text-5xl font-semibold mb-15">Il mio percorso in breve</h2>
 
                 {/* Timeline*/}
                 <div className="flex justify-center w-full mb-8">
-                    <div className="flex flex-col gap-10 text-2xl text-gray-300">
+                    <div className="flex flex-col gap-10 text-xl text-gray-300">
                         {timelineData.map((item, idx) => {
                             const ref = useRef(null);
                             const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -94,7 +94,7 @@ const AboutPage: React.FC = () => {
                                     ref={ref}
                                     initial={{ opacity: 0, x: -50 }}
                                     animate={controls}
-                                    className="flex items-start gap-4"
+                                    className="flex items-center gap-4"
                                 >
                                     <div className="flex flex-col items-center">
                                         <div className={`${item.color} w-5 h-5 rounded-full shadow-lg z-10`}></div>

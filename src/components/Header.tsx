@@ -23,7 +23,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
     return (
         <header className="fixed top-0 w-full z-50 shadow-md bg-[linear-gradient(to_bottom,_#1a1a1a_0%,_black_50%)]">
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+            <div className="container px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
 
                 {/* LOGO */}
                 <NavLink
@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({ sitename }) => {
                       text-xl font-bold tracking-widest 
                       text-cyan-400 hover:text-cyan-300 
                       transition duration-300 neon-text
-                      flex items-center space-x-2 
+                      flex items-center space-x-2
                     "
                 >
                     <img
