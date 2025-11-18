@@ -38,7 +38,7 @@ const ProjectsPage: React.FC = () => {
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="md:w-7/12 text-gray-300 text-center md:text-left text-lg sm:text-xl italic md:ml-auto md:pr-10"
+                    className="md:w-7/12 md:leading-8 lg:leading-10  text-gray-300 text-center md:text-left text-lg sm:text-xl italic md:ml-auto md:pr-10"
                 >
                     Ogni progetto che trovi qui racconta una parte del mio percorso: dal design alla programmazione, cerco sempre di coniugare creatività e funzionalità per creare esperienze che siano belle da vedere e semplici da usare.
                 </motion.div>
