@@ -103,25 +103,25 @@ const ContactsPage: React.FC = () => {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="flex flex-wrap justify-center gap-8 w-full max-w-5xl mb-20"
+                className="flex flex-wrap justify-center gap-4 w-full max-w-5xl mb-20"
             >
                 {[
                     {
                         key: "cv",
                         action: downloadCV,
-                        icon: <FileText className="w-12 h-12 text-gray-900" />,
+                        icon: <FileText className="w-10 h-10 sm:w-12 sm:h-12 text-gray-900" />,
                         label: "Scarica CV",
                     },
                     {
                         key: "github",
                         href: "https://github.com/ValerioDiBiagio",
-                        icon: <Github className="w-12 h-12 text-gray-900" />,
+                        icon: <Github className="w-10 h-10 sm:w-12 sm:h-12 text-gray-900" />,
                         label: "GitHub",
                     },
                     {
                         key: "linkedin",
                         href: "https://www.linkedin.com/in/valerio-di-biagio-429769387/",
-                        icon: <Linkedin className="w-12 h-12 text-gray-900" />,
+                        icon: <Linkedin className="w-10 h-10 sm:w-12 sm:h-12 text-gray-900" />,
                         label: "LinkedIn",
                     },
                 ].map((item, index) => (
@@ -133,17 +133,17 @@ const ContactsPage: React.FC = () => {
                         whileHover={{ scale: 1.07, y: -5 }}
                         whileTap={{ scale: 0.95 }}
                         onClick={item.action}
-                        className={`cursor-pointer bg-gray-300 border border-zinc-800 hover:bg-cyan-400 rounded-2xl p-6 flex flex-col items-center gap-4 transition-all shadow-lg w-44 h-36`}
+                        className={`flex-shrink-0 cursor-pointer bg-gray-300 border border-zinc-800 hover:bg-cyan-400 rounded-2xl p-3 sm:p-6 flex flex-col items-center gap-2 sm:gap-4 transition-all shadow-lg w-24 sm:w-44 h-24 sm:h-36 ${item.key === "linkedin" ? "sm:mr-4" : ""}`}
                     >
                         {item.href ? (
-                            <a href={item.href} target="_blank" className="flex flex-col items-center gap-4">
+                            <a href={item.href} target="_blank" className="flex flex-col items-center gap-2 sm:gap-4">
                                 {item.icon}
-                                <p className="text-gray-900 text-center italic text-lg">{item.label}</p>
+                                <p className="text-gray-900 text-center italic text-sm sm:text-lg">{item.label}</p>
                             </a>
                         ) : (
                             <>
                                 {item.icon}
-                                <p className="text-gray-900 text-center italic text-lg">{item.label}</p>
+                                <p className="text-gray-900 text-center italic text-sm sm:text-lg">{item.label}</p>
                             </>
                         )}
                     </motion.div>
@@ -159,7 +159,7 @@ const ContactsPage: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="w-full max-w-3xl flex flex-col gap-6 shadow-xl relative group"
+                className="w-full max-w-full sm:max-w-3xl flex flex-col gap-6 shadow-xl relative group px-2 sm:px-8 md:px-16"
             >
                 <h2 className="text-center text-gray-300 text-2xl sm:text-5xl font-semibold mb-5">
                     Scrivimi un messaggio
@@ -197,7 +197,7 @@ const ContactsPage: React.FC = () => {
                     transition={{ duration: 0.1 }}
                     className="w-full bg-gray-300 text-gray-900 font-semibold py-3 rounded-xl hover:bg-cyan-400 transition-all"
                 >
-                    {isSubmitting ? "Invio..." : "Invia messaggio"}
+                    {isSubmitting ? "Invio..." : "INVIA MESSAGGIO"}
                 </motion.button>
 
                 {/* Animated Toast */}
@@ -225,7 +225,7 @@ const ContactsPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="text-gray-300 mt-16 text-center italic text-lg"
             >
-                Hai un’idea, un progetto o vuoi semplicemente confrontarti? Scrivimi, sarò felice di ascoltarti! ✨
+                Hai un’idea, un progetto o vuoi semplicemente confrontarti? Scrivimi, sarò felice di ascoltarti!
             </motion.p>
         </div>
     );
