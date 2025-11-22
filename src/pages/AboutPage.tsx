@@ -70,7 +70,7 @@ const AboutPage: React.FC = () => {
                     transition={{ duration: 0.8 }}
                     className="md:w-7/12 md:leading-8 lg:leading-9 text-gray-300 text-center md:text-left text-lg sm:text-xl italic md:ml-auto md:pr-10 mt-12"
                 >
-                    Sono Valerio Di Biagio, un Junior Front-End Developer con passione per il design, l’usabilità e la creazione di interfacce pulite e intuitive. Dopo diverse esperienze lavorative che mi hanno sviluppato organizzazione, problem solving e attenzione alle persone, ho scelto di dedicarmi allo sviluppo web.<br />
+                    Sono Valerio Di Biagio, un Junior Front-End Developer con passione per il design, l’usabilità e la creazione di interfacce pulite e intuitive. Dopo diverse esperienze lavorative in cui ho sviluppato organizzazione, problem solving e attenzione alle persone, ho scelto di dedicarmi allo sviluppo web.<br />
 
                     Mi occupo principalmente di HTML, CSS, JavaScript, React e TypeScript, con una solida base di UX/UI e component design. Ho realizzato progetti come componenti UI documentati con Storybook, e-commerce e prototipi web, sempre con un focus su estetica, accessibilità e responsività.<br />
 

@@ -225,7 +225,7 @@ const ContactsPage: React.FC = () => {
                 viewport={{ once: true }}
                 className="text-gray-300 mt-16 text-center italic text-lg"
             >
-                Hai un’idea, un progetto o vuoi semplicemente confrontarti? Scrivimi, sarò felice di ascoltarti!
+                Hai un’idea, un progetto o vuoi semplicemente confrontarti? Scrivimi, sarò felice di leggerti!
             </motion.p>
         </div>
     );
