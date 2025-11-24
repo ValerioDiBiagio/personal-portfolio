@@ -76,7 +76,7 @@ const ContactsPage: React.FC = () => {
                     <img
                         className="base-image fade-full w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-500"
                         src="/image/iocontelefono.png"
-                        alt="Foto Valerio al pc"
+                        alt="Foto Valerio con il telefono in mano"
                     />
                     <img
                         className="hover-image fade-full absolute top-0 left-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-500"

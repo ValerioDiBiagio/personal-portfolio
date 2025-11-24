@@ -54,12 +54,12 @@ const AboutPage: React.FC = () => {
                     <img
                         className="base-image fade-full w-60 md:w-full rounded-xl shadow-2xl"
                         src="/image/iopoltrona.png"
-                        alt="Foto Valerio al pc"
+                        alt="Foto Valerio sulla poltrona"
                     />
                     <img
                         className="hover-image fade-full absolute top-0 left-0 w-60 md:w-full rounded-xl shadow-2xl opacity-0 hover:opacity-100 transition-opacity duration-500"
                         src="/image/iopoltronaparlo.png"
-                        alt="Foto Valerio al pc con sorriso"
+                        alt="Foto Valerio sulla poltrona che parla"
                     />
                 </motion.figure>
 
