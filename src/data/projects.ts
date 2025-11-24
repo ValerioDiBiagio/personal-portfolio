@@ -39,9 +39,13 @@ const featuredProjects: Project[] = [
             "Sviluppo del frontend di un prototipo per la gestione di viaggiatori e viaggi con dati statici.",
         image: "/image/booroad-hero.png",
         media: [
-            "/image/topgames/1.png",
-            "/image/topgames/2.png",
-            "/image/topgames/3.png",
+            "/image/booroad/booroad-hero-detail.png",
+            "/image/booroad/booroad-home.png",
+            "/image/booroad/booroad-travel.png",
+            "/image/booroad/booroad-travellers.png",
+            "/image/booroad/booroad-travellers-details.png",
+            "/image/booroad/booroad-guides.png",
+            "/video/booroad/booroad-video.mp4",
         ]
     },
     {
@@ -52,9 +56,11 @@ const featuredProjects: Project[] = [
             "Sviluppo di un header UI component per un sito dedicato alla tecnologia.",
         image: "/image/header-light-desktop.png",
         media: [
-            "/image/topgames/1.png",
-            "/image/topgames/2.png",
-            "/image/topgames/3.png",
+            "/image/header-design/light-desktop.png",
+            "/image/header-design/light-tablet.png",
+            "/image/header-design/dark-desktop.png",
+            "/image/header-design/dark-tablet.png",
+            "/video/header-design/header-video.mp4",
         ]
     },
 
