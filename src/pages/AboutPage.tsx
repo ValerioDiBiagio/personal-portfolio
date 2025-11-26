@@ -87,9 +87,9 @@ const AboutPage: React.FC = () => {
             >
                 <h2 className="text-gray-300 text-3xl sm:text-5xl font-semibold">Il mio percorso in breve</h2>
 
+
                 <p className="text-gray-400 max-w-2xl mb-6 mt-2 text-lg italic">
-                    <p className="text-gray-400 max-w-2xl mb-6 mt-2 text-lg italic">
-                        Un percorso vario che mi ha permesso di sviluppare competenze trasversali, adattabilità e una visione più completa del lavoro e delle persone.</p></p>
+                    Un percorso vario che mi ha permesso di sviluppare competenze trasversali, adattabilità e una visione più completa del lavoro e delle persone.</p>
 
                 {/* Timeline */}
                 <div className="flex justify-center w-full mb-8">

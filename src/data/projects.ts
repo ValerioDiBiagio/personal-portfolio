@@ -1,3 +1,9 @@
+interface MediaItem {
+    src: string;
+    caption?: string;
+    alt?: string;
+}
+
 interface Project {
     slug: string;
     title: string;
@@ -5,10 +11,9 @@ interface Project {
     shortDescription: string;
     longDescription: string;
     image: string;
-    media: string[];
+    media: Array<string | MediaItem>;
     technologies: string[];
-};
-
+}
 
 const featuredProjects: Project[] = [
     {
@@ -25,18 +30,18 @@ const featuredProjects: Project[] = [
              Grazie a questa esperienza, ho consolidato le mie competenze nello sviluppo full-stack, nella creazione di interfacce moderne e funzionali e nel lavoro collaborativo all’interno di un team.`,
         image: "/image/topgames-hero.png",
         media: [
-            "/image/topgames/topgames-popup.png",
-            "/image/topgames/topgames-hero-detail.png",
-            "/image/topgames/topgames-ultimiarrivi.png",
-            "/image/topgames/topgames-cards.png",
-            "/image/topgames/topgames-footer.png",
-            "/image/topgames/topgames-details.png",
-            "/image/topgames/topgames-ps5.png",
-            "/image/topgames/topgames-wishlist.png",
-            "/image/topgames/topgames-cart.png",
-            "/image/topgames/topgames-checkout.png",
-            "/video/topgames/top-games-video.mp4",
-            "/video/topgames/top-games-responsive.mp4",
+            { src: "/image/topgames/topgames-popup.png", caption: "Popup di benvenuto", alt: "Popup di benvenuto" },
+            { src: "/image/topgames/topgames-hero-detail.png", caption: "Hero section", alt: "Hero section" },
+            { src: "/image/topgames/topgames-ultimiarrivi.png", caption: "Sezione Ultimi Arrivi", alt: "Sezione Ultimi Arrivi" },
+            { src: "/image/topgames/topgames-cards.png", caption: "Cards dei prodotti", alt: "Cards dei prodotti" },
+            { src: "/image/topgames/topgames-footer.png", caption: "Footer del sito", alt: "Footer del sito" },
+            { src: "/image/topgames/topgames-details.png", caption: "Pagina con card di dettaglio del prodotto", alt: "Pagina con card di dettaglio del prodotto" },
+            { src: "/image/topgames/topgames-ps5.png", caption: "Pagina PS5", alt: "Pagina PS5" },
+            { src: "/image/topgames/topgames-wishlist.png", caption: "Pagina della wishlist", alt: "Pagina della wishlist" },
+            { src: "/image/topgames/topgames-cart.png", caption: "Sezione del carrello", alt: "Sezione del carrello" },
+            { src: "/image/topgames/topgames-checkout.png", caption: "Pagina del checkout", alt: "Pagina del checkout" },
+            { src: "/video/topgames/top-games-video.mp4", caption: "Video - Demo del sito", alt: "Video - Demo del sito" },
+            { src: "/video/topgames/top-games-responsive.mp4", caption: "Video - Versione responsive del sito", alt: "Video - Versione responsive del sito" },
         ],
         technologies: ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap", "MySQL", "Node.js", "Express.js", "Vite", "Postman", "GitHub", "Visual Studio Code"],
     },
@@ -48,19 +53,19 @@ const featuredProjects: Project[] = [
             "Sviluppo del frontend di un prototipo per la gestione di viaggiatori e viaggi con dati statici.",
         longDescription:
             `Ho partecipato allo sviluppo del frontend di un prototipo per la gestione di viaggiatori e viaggi, basato su dati statici, occupandomi dell’intera progettazione visiva e dell’implementazione delle interazioni utente.<br/><br/>
-             In particolare, mi sono concentrato sul design e sul layout del sito, curando la disposizione dei componenti, la struttura delle pagine e la coerenza visiva dell’interfaccia. Ho prestato particolare attenzione alla responsività, assicurando che l’applicazione fosse perfettamente fruibile su dispositivi desktop, tablet e mobile.<br/><br/>
+             Mi sono concentrato sul design e sul layout del sito, curando la disposizione dei componenti, la struttura delle pagine e la coerenza visiva dell’interfaccia. Ho prestato particolare attenzione alla responsività, assicurando che l’applicazione fosse perfettamente fruibile su dispositivi desktop, tablet e mobile.<br/><br/>
              Ho gestito la scelta dei colori, delle icone, della tipografia e delle immagini, garantendo un aspetto visivo armonioso e una chiara gerarchia delle informazioni. Ho inoltre implementato la navigazione tra le pagine e la visualizzazione dei dati statici, creando componenti React modulari e riutilizzabili per semplificare la manutenzione e la scalabilità del progetto.<br/><br/>
              Per lo sviluppo ho utilizzato React per la struttura dei componenti e la gestione dello stato locale, Bootstrap per velocizzare lo styling dei layout e dei componenti interattivi, e CSS puro per personalizzazioni avanzate e dettagli grafici.<br/><br/>
              Grazie a questo progetto, ho consolidato le mie competenze nella progettazione e realizzazione di interfacce moderne, nello sviluppo frontend modulare e nella gestione della responsività e dell’usabilità, migliorando anche la capacità di tradurre esigenze di design in implementazioni funzionali.`,
         image: "/image/booroad-hero.png",
         media: [
-            "/image/booroad/booroad-hero-detail.png",
-            "/image/booroad/booroad-home.png",
-            "/image/booroad/booroad-travel.png",
-            "/image/booroad/booroad-travellers.png",
-            "/image/booroad/booroad-travellers-details.png",
-            "/image/booroad/booroad-guides.png",
-            "/video/booroad/booroad-video.mp4",
+            { src: "/image/booroad/booroad-hero-detail.png", caption: "Hero section", alt: "Hero section" },
+            { src: "/image/booroad/booroad-home.png", caption: "Home del sito", alt: "Home del sito" },
+            { src: "/image/booroad/booroad-travel.png", caption: "Pagina di dettaglio del viaggio", alt: "Pagina di dettaglio del viaggio" },
+            { src: "/image/booroad/booroad-travellers.png", caption: "Pagina con la lista dei viaggiatori", alt: "Pagina con la lista dei viaggiatori" },
+            { src: "/image/booroad/booroad-travellers-details.png", caption: "Sezione con dettaglio dei viaggiatori", alt: "Sezione con dettaglio dei viaggiatori" },
+            { src: "/image/booroad/booroad-guides.png", caption: "Pagina con l'elenco delle guide", alt: "Pagina con l'elenco delle guide" },
+            { src: "/video/booroad/booroad-video.mp4", caption: "Video - Demo del sito", alt: "Video - Demo del sito" },
         ],
         technologies: ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Vite", "GitHub", "Visual Studio Code"],
     },
@@ -78,15 +83,14 @@ const featuredProjects: Project[] = [
              Questo progetto mi ha permesso di consolidare competenze nella creazione di componenti UI modulari, responsivi e accessibili, nella documentazione con Storybook e nell’adozione di metodologie di design e sviluppo orientate alla qualità e alla scalabilità del codice.`,
         image: "/image/header-light-desktop.png",
         media: [
-            "/image/header-design/light-desktop.png",
-            "/image/header-design/light-tablet.png",
-            "/image/header-design/dark-desktop.png",
-            "/image/header-design/dark-tablet.png",
-            "/video/header-design/header-video.mp4",
+            { src: "/image/header-design/light-desktop.png", caption: "Header nella versione desktop light", alt: "Header nella versione desktop light" },
+            { src: "/image/header-design/light-tablet.png", caption: "Header nella versione tablet light", alt: "Header nella versione tablet light" },
+            { src: "/image/header-design/dark-desktop.png", caption: "Header nella versione desktop dark", alt: "Header nella versione desktop dark" },
+            { src: "/image/header-design/dark-tablet.png", caption: "Header nella versione tablet dark", alt: "Header nella versione tablet dark" },
+            { src: "/video/header-design/header-video.mp4", caption: "Video - Demo dell'header", alt: "Video - Demo dell'header" },
         ],
         technologies: ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Bootstrap", "Storybook", "Vite", "GitHub", "Visual Studio Code"],
     }
-
 ];
 
 export default featuredProjects;

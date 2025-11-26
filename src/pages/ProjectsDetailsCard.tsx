@@ -26,7 +26,7 @@ const TechBanner: React.FC<{ technologies: string[] }> = ({ technologies }) => {
 
     return (
         <div className="flex flex-col justify-center items-center space-y-6 mt-20">
-            <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-10">
+            <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold text-center mt-10 mb-10">
                 Tecnologie utilizzate
             </h2>
 
@@ -109,17 +109,24 @@ const ProjectDetailsPage: React.FC = () => {
                 {project.title}
             </motion.h1>
 
+            {/* Banner */}
             <motion.div
                 className="w-full h-20 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30 mb-20"
-                animate={{ scale: [1, 1.13, 1] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, 50, 0] }}
+                transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "linear",
+                }}
             />
 
+            {/* Carosello */}
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2 }}
-                className="w-full max-w-3xl mb-12 relative flex justify-center"
+                className="w-full max-w-3xl relative flex justify-center"
             >
                 <Swiper
                     modules={[Navigation, Pagination]}
@@ -130,17 +137,45 @@ const ProjectDetailsPage: React.FC = () => {
                     pagination={{ clickable: true }}
                     spaceBetween={20}
                     slidesPerView={1}
-                    className="rounded-3xl overflow-hidden shadow-2xl"
+                    className="rounded-3xl overflow-hidden shadow-2xl relative"
+                    style={{ paddingBottom: '4rem' }}
                 >
-                    {mediaGallery.map((item, index) => (
-                        <SwiperSlide key={index}>
-                            {item.endsWith(".mp4") ? (
-                                <video src={item} controls className="w-full h-auto rounded-2xl" />
-                            ) : (
-                                <img src={item} alt={`media-${index}`} className="w-full h-auto object-cover rounded-2xl" />
-                            )}
-                        </SwiperSlide>
-                    ))}
+                    {mediaGallery.map((item, index) => {
+                        let src: string;
+                        let caption: string;
+                        let alt: string;
+
+                        if (typeof item === "string") {
+                            src = item;
+                            caption = "";
+                            alt = "";
+                        } else {
+                            src = item.src;
+                            caption = item.caption || "";
+                            alt = item.alt || item.caption || "";
+                        }
+
+                        return (
+                            <SwiperSlide key={index} className="relative">
+                                {src.endsWith(".mp4") ? (
+                                    <video src={src} controls className="w-full h-auto rounded-2xl" />
+                                ) : (
+                                    <img
+                                        src={src}
+                                        alt={alt}
+                                        className="w-full h-auto object-cover rounded-2xl"
+                                    />
+                                )}
+
+                                {caption && (
+                                    <div className="absolute left-1/2 -translate-x-1/2 text-center text-gray-300 italic bg-black/50 px-3 py-1 rounded-md text-sm sm:text-base z-20 whitespace-normal max-w-[90%]">
+                                        {caption}
+                                    </div>
+                                )}
+                            </SwiperSlide>
+                        );
+                    })}
+
                 </Swiper>
 
                 {/* Freccia sinistra */}
@@ -160,24 +195,19 @@ const ProjectDetailsPage: React.FC = () => {
                 >
                     <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                 </motion.button>
-
-
-
             </motion.div>
-
 
             {/* Descrizione */}
             <motion.div
                 initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 0.7 }}
                 className="max-w-3xl text-center text-gray-300 italic text-base sm:text-lg md:text-lg leading-7 sm:leading-8 px-2"
             >
                 <p dangerouslySetInnerHTML={{ __html: project.longDescription }} />
             </motion.div>
 
-
-            {/* Banner Tecnologie*/}
+            {/* Banner Tecnologie */}
             {project.technologies && (
                 <TechBanner technologies={project.technologies} />
             )}
@@ -195,8 +225,13 @@ const ProjectDetailsPage: React.FC = () => {
             {/* Glow finale */}
             <motion.div
                 className="w-full h-20 rounded-3xl pointer-events-none bg-gradient-to-r from-cyan-400 via-lime-500 to-cyan-400 blur-3xl opacity-30 mb-20"
-                animate={{ scale: [1, 1.13, 1] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                animate={{ x: [0, 50, 0] }}
+                transition={{
+                    duration: 6,
+                    repeat: Infinity,
+                    repeatType: "loop",
+                    ease: "linear",
+                }}
             />
         </div>
     );
