@@ -89,7 +89,7 @@ const featuredProjects: Project[] = [
             { src: "/image/header-design/dark-tablet.png", caption: "Header nella versione tablet dark", alt: "Header nella versione tablet dark" },
             { src: "/video/header-design/header-video.mp4", caption: "Video - Demo dell'header", alt: "Video - Demo dell'header" },
         ],
-        technologies: ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Bootstrap", "Storybook", "Vite", "GitHub", "Visual Studio Code"],
+        technologies: ["React", "TypeScript", "HTML5", "CSS3", "Bootstrap", "Storybook", "Vite", "GitHub", "Visual Studio Code"],
     }
 ];
 
