@@ -8,7 +8,7 @@ type Project = {
     slug: string;
     title: string;
     category: string;
-    description: string;
+    shortDescription: string;
     image: string;
 };
 
@@ -64,7 +64,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                     onClick={handlePrev}
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.9 }}
-                    className="absolute left-1 sm:left-4 md:left-6 z-20 p-2 sm:p-3 md:p-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-cyan-400/20 text-gray-200 transition shadow-lg"
+                    className="absolute left-1 sm:left-4 md:left-6 z-20 p-2 sm:p-3 md:p-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-cyan-400/20 text-lime-400 transition shadow-lg"
                 >
                     <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                 </motion.button>
@@ -74,7 +74,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                     onClick={handleNext}
                     whileHover={{ scale: 1.15 }}
                     whileTap={{ scale: 0.9 }}
-                    className="absolute right-1 sm:right-4 md:right-6 z-20 p-2 sm:p-3 md:p-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-cyan-400/20 text-gray-200 transition shadow-lg"
+                    className="absolute right-1 sm:right-4 md:right-6 z-20 p-2 sm:p-3 md:p-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-cyan-400/20 text-lime-400 transition shadow-lg"
                 >
                     <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                 </motion.button>
@@ -118,7 +118,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
                                         {project.category}
                                     </p>
                                     <p className="text-gray-300 mb-5 text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed italic">
-                                        {project.description}
+                                        {project.shortDescription}
                                     </p>
 
                                     <motion.div whileHover={{ scale: 1.05 }}>

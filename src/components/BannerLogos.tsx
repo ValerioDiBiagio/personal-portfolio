@@ -1,21 +1,22 @@
 import React from "react";
 
+// Lista loghi con URL alla documentazione ufficiale
 const logos = [
-    { src: "./image/javascript.png", alt: "JavaScript" },
-    { src: "./image/typescript.png", alt: "TypeScript" },
-    { src: "./image/html.png", alt: "HTML5" },
-    { src: "./image/css.png", alt: "CSS3" },
-    { src: "./image/react.png", alt: "React" },
-    { src: "./image/bootstrap.png", alt: "Bootstrap" },
-    { src: "./image/tailwind.png", alt: "Tailwind CSS" },
-    { src: "./image/mysql.png", alt: "MySQL" },
-    { src: "./image/nodejs.png", alt: "Node.js" },
-    { src: "./image/express.png", alt: "Express.js" },
-    { src: "./image/vite.png", alt: "Vite" },
-    { src: "./image/github.png", alt: "GitHub" },
-    { src: "./image/storybook.png", alt: "Storybook" },
-    { src: "./image/postman.png", alt: "Postman" },
-    { src: "./image/vsc.png", alt: "Visual Studio Code" },
+    { src: "./image/javascript.png", alt: "JavaScript", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+    { src: "./image/typescript.png", alt: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
+    { src: "./image/html.png", alt: "HTML5", url: "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+    { src: "./image/css.png", alt: "CSS3", url: "https://developer.mozilla.org/en-US/docs/Web/CSS" },
+    { src: "./image/react.png", alt: "React", url: "https://react.dev/" },
+    { src: "./image/bootstrap.png", alt: "Bootstrap", url: "https://getbootstrap.com/docs/" },
+    { src: "./image/tailwind.png", alt: "Tailwind CSS", url: "https://tailwindcss.com/docs/" },
+    { src: "./image/mysql.png", alt: "MySQL", url: "https://dev.mysql.com/doc/" },
+    { src: "./image/nodejs.png", alt: "Node.js", url: "https://nodejs.org/en/docs/" },
+    { src: "./image/express.png", alt: "Express.js", url: "https://expressjs.com/en/guide/routing.html" },
+    { src: "./image/vite.png", alt: "Vite", url: "https://vitejs.dev/guide/" },
+    { src: "./image/github.png", alt: "GitHub", url: "https://docs.github.com/en" },
+    { src: "./image/storybook.png", alt: "Storybook", url: "https://storybook.js.org/docs" },
+    { src: "./image/postman.png", alt: "Postman", url: "https://learning.postman.com/" },
+    { src: "./image/vsc.png", alt: "Visual Studio Code", url: "https://code.visualstudio.com/docs" },
 ];
 
 const BannerLogos: React.FC = () => {
@@ -34,12 +35,28 @@ const BannerLogos: React.FC = () => {
                 <div className="scroll-container">
                     <div className="scroll-content">
                         {logos.map((logo, i) => (
-                            <img key={i} src={logo.src} alt={logo.alt} className="h-14 w-auto mx-4 inline-block" />
+                            <a
+                                key={`a-${i}`}
+                                href={logo.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block mx-4 hover:scale-110 transition-transform duration-200"
+                            >
+                                <img src={logo.src} alt={logo.alt} className="h-14 w-auto inline-block" />
+                            </a>
                         ))}
                     </div>
                     <div className="scroll-content">
                         {logos.map((logo, i) => (
-                            <img key={i} src={logo.src} alt={logo.alt} className="h-14 w-auto mx-4 inline-block" />
+                            <a
+                                key={`b-${i}`}
+                                href={logo.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-block mx-4 hover:scale-110 transition-transform duration-200"
+                            >
+                                <img src={logo.src} alt={logo.alt} className="h-14 w-auto inline-block" />
+                            </a>
                         ))}
                     </div>
                 </div>

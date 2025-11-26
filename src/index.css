@@ -113,3 +113,8 @@ img.fade-bottom {
 .image-container:hover .base-image {
     opacity: 0;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none !important;
+}
