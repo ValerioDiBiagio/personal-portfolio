@@ -90,7 +90,7 @@ const ProjectsPage: React.FC = () => {
                                     {project.title}
                                 </h3>
                                 <p className="text-gray-300 mb-3 text-sm sm:text-base md:text-lg italic">
-                                    {project.description}
+                                    {project.shortDescription}
                                 </p>
                                 <motion.div whileHover={{ scale: 1.05 }}>
                                     <NavLink
