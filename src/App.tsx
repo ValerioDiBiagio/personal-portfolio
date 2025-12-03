@@ -5,10 +5,12 @@ import ProjectsPage from './pages/ProjectsPage';
 import ContactsPage from './pages/ContactsPage';
 import DefaultLayout from './layouts/DefaultLayout';
 import ProjectsDetailsCard from './pages/ProjectsDetailsCard';
+import ScrollToTop from './components/ScrollToTop';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path='/' element={<Home />} />
