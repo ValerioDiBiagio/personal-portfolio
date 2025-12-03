@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import HeroBackground from './HeroBackground';
+import { motion } from "framer-motion";
 
 type HeroSectionProps = {
     name: string;
@@ -47,12 +48,17 @@ const HeroSection: React.FC<HeroSectionProps> = ({ name, title, description }) =
                             <p className="text-sm md:text-base font-light tracking-wide italic mb-0 md:mb-4">
                                 {description}
                             </p>
-                            <NavLink
-                                to="/aboutme"
-                                className="inline-block mt-4 sm:mt-2 px-6 sm:px-8 py-3 sm:py-4 transition duration-300 font-bold rounded-full shadow-lg text-base sm:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
+                            <motion.div
+                                whileHover={{ scale: 1.05 }}
+
                             >
-                                SCOPRI DI PIÙ
-                            </NavLink>
+                                <NavLink
+                                    to="/aboutme"
+                                    className="inline-block mt-4 sm:mt-2 px-6 sm:px-8 py-3 sm:py-4 transition duration-300 font-bold rounded-full shadow-lg text-base sm:text-lg bg-gray-300 text-gray-900 hover:bg-cyan-500"
+                                >
+                                    SCOPRI DI PIÙ
+                                </NavLink>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
