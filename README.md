@@ -46,7 +46,7 @@ In sintesi, lo stile del portfolio è un mix bilanciato di **professionalità, i
 
 L’applicazione segue una struttura modulare, con componenti riutilizzabili e pagine dedicate.
 
-## 🧩 Componenti Chiave
+## 🧩 Caratteristiche Chiave
 
 ### ✔ Navbar Responsive
 - Ottimizzata per desktop e mobile  
