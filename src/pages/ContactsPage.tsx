@@ -165,28 +165,40 @@ const ContactsPage: React.FC = () => {
                     Scrivimi un messaggio
                 </h2>
 
-                <input
-                    type="text"
-                    placeholder="Il tuo nome"
-                    {...register("name")}
-                    className="w-full bg-zinc-900 text-gray-300 border border-lime-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />
-                {errors.name && <p className="text-red-400 text-sm">{errors.name.message}</p>}
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="name" className="text-gray-300 font-medium">Nome:</label>
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="Il tuo nome"
+                        {...register("name")}
+                        className="w-full bg-zinc-900 text-gray-300 border border-lime-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    />
+                    {errors.name && <p className="text-red-400 text-sm">{errors.name.message}</p>}
+                </div>
 
-                <input
-                    type="email"
-                    placeholder="La tua email"
-                    {...register("email")}
-                    className="w-full bg-zinc-900 text-gray-300 border border-lime-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />
-                {errors.email && <p className="text-red-400 text-sm">{errors.email.message}</p>}
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="email" className="text-gray-300 font-medium">Email:</label>
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="La tua email"
+                        {...register("email")}
+                        className="w-full bg-zinc-900 text-gray-300 border border-lime-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    />
+                    {errors.email && <p className="text-red-400 text-sm">{errors.email.message}</p>}
+                </div>
 
-                <textarea
-                    placeholder="Il tuo messaggio"
-                    {...register("message")}
-                    className="w-full h-40 bg-zinc-900 text-gray-300 border border-lime-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                />
-                {errors.message && <p className="text-red-400 text-sm">{errors.message.message}</p>}
+                <div className="flex flex-col gap-1">
+                    <label htmlFor="message" className="text-gray-300 font-medium">Messaggio:</label>
+                    <textarea
+                        id="message"
+                        placeholder="Il tuo messaggio"
+                        {...register("message")}
+                        className="w-full h-40 bg-zinc-900 text-gray-300 border border-lime-300 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                    />
+                    {errors.message && <p className="text-red-400 text-sm">{errors.message.message}</p>}
+                </div>
 
                 <motion.button
                     type="submit"
@@ -200,7 +212,6 @@ const ContactsPage: React.FC = () => {
                     {isSubmitting ? "Invio..." : "INVIA MESSAGGIO"}
                 </motion.button>
 
-                {/* Animated Toast */}
                 <AnimatePresence>
                     {toast && (
                         <motion.p
@@ -216,6 +227,7 @@ const ContactsPage: React.FC = () => {
                     )}
                 </AnimatePresence>
             </motion.form>
+
 
             {/* CTA finale */}
             <motion.p
