@@ -1,80 +1,77 @@
-export const techLogos: Record<
-    string,
-    { src: string; alt: string; url: string }
-> = {
+export const techLogos = {
     JavaScript: {
         src: "/image/javascript.png",
         alt: "JavaScript",
-        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     TypeScript: {
         src: "/image/typescript.png",
         alt: "TypeScript",
-        url: "https://www.typescriptlang.org/docs/",
+        url: "https://www.typescriptlang.org/docs/"
     },
-    HTML: {
+    HTML5: {
         src: "/image/html.png",
         alt: "HTML5",
-        url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        url: "https://developer.mozilla.org/en-US/docs/Web/HTML"
     },
-    CSS: {
+    CSS3: {
         src: "/image/css.png",
         alt: "CSS3",
-        url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        url: "https://developer.mozilla.org/en-US/docs/Web/CSS"
     },
     React: {
         src: "/image/react.png",
         alt: "React",
-        url: "https://react.dev/",
+        url: "https://react.dev/"
     },
     Bootstrap: {
         src: "/image/bootstrap.png",
         alt: "Bootstrap",
-        url: "https://getbootstrap.com/docs/",
+        url: "https://getbootstrap.com/docs/"
     },
     Tailwind: {
         src: "/image/tailwind.png",
         alt: "Tailwind CSS",
-        url: "https://tailwindcss.com/docs/",
+        url: "https://tailwindcss.com/docs/"
     },
     MySQL: {
         src: "/image/mysql.png",
         alt: "MySQL",
-        url: "https://dev.mysql.com/doc/",
+        url: "https://dev.mysql.com/doc/"
     },
-    Node: {
+    "Node.js": {
         src: "/image/nodejs.png",
         alt: "Node.js",
-        url: "https://nodejs.org/en/docs/",
+        url: "https://nodejs.org/en/docs/"
     },
-    Express: {
+    "Express.js": {
         src: "/image/express.png",
         alt: "Express.js",
-        url: "https://expressjs.com/en/guide/routing.html",
+        url: "https://expressjs.com/en/guide/routing.html"
     },
     Vite: {
         src: "/image/vite.png",
         alt: "Vite",
-        url: "https://vitejs.dev/guide/",
+        url: "https://vitejs.dev/guide/"
     },
     GitHub: {
         src: "/image/github.png",
         alt: "GitHub",
-        url: "https://docs.github.com/en",
+        url: "https://docs.github.com/en"
     },
     Storybook: {
         src: "/image/storybook.png",
         alt: "Storybook",
-        url: "https://storybook.js.org/docs",
+        url: "https://storybook.js.org/docs"
     },
     Postman: {
         src: "/image/postman.png",
         alt: "Postman",
-        url: "https://learning.postman.com/",
+        url: "https://learning.postman.com/"
     },
-    VSCode: {
+    "Visual Studio Code": {
         src: "/image/vsc.png",
         alt: "Visual Studio Code",
-        url: "https://code.visualstudio.com/docs",
-    },
+        url: "https://code.visualstudio.com/docs"
+    }
 };

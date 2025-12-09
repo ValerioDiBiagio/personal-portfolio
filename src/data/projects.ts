@@ -13,6 +13,7 @@ interface Project {
     image: string;
     media: Array<string | MediaItem>;
     technologies: string[];
+    featured?: boolean;
 }
 
 const featuredProjects: Project[] = [
@@ -20,6 +21,7 @@ const featuredProjects: Project[] = [
         slug: "top-games",
         title: "Top Games",
         category: "Full Stack Development",
+        featured: true,
         shortDescription:
             "Progetto di gruppo per lo sviluppo di un e-commerce di videogiochi, con contributo sia al frontend che al backend.",
         longDescription:
@@ -49,6 +51,7 @@ const featuredProjects: Project[] = [
         slug: "booroad",
         title: "BooRoad",
         category: "Front-End Development",
+        featured: true,
         shortDescription:
             "Sviluppo del frontend di un prototipo per la gestione di viaggiatori e viaggi con dati statici.",
         longDescription:
@@ -73,6 +76,7 @@ const featuredProjects: Project[] = [
         slug: "componente-header",
         title: "Componente Header",
         category: "UX/UI Design",
+        featured: true,
         shortDescription:
             "Sviluppo di un header UI component per un sito dedicato alla tecnologia.",
         longDescription:
@@ -90,7 +94,34 @@ const featuredProjects: Project[] = [
             { src: "/video/header-design/header-video.mp4", caption: "Video - Demo dell'header", alt: "Video - Demo dell'header" },
         ],
         technologies: ["React", "TypeScript", "HTML5", "CSS3", "Bootstrap", "Storybook", "Vite", "GitHub", "Visual Studio Code"],
+    },
+    {
+        slug: "photo-blog",
+        title: "Photo Blog",
+        category: "Front-End Development",
+        featured: false,
+        shortDescription:
+            "Sviluppo frontend di un blog fotografico delle vacanze estive",
+        longDescription:
+            `Questo progetto nasce dal desiderio di trasformare una semplice raccolta di immagini in qualcosa di più caldo e narrativo. Ho realizzato una galleria fotografica utilizzando HTML5, CSS e JavaScript, ispirandomi all’estetica analogica delle vecchie bacheche in sughero e delle foto Polaroid.<br/><br/>
+            L’interfaccia è costruita come una vera bacheca: lo sfondo richiama il sughero e ogni foto è presentata come se fosse appuntata con una puntina. L’obiettivo era dare la sensazione di trovarsi davanti a un angolo personale, quasi fisico, fatto di ricordi dell’“Estate ’24”.<br/><br/>
+            Le immagini sono inserite all’interno di cornici bianche tipiche delle Polaroid, complete di data e titolo. Questa scelta stilistica aiuta a creare un’atmosfera nostalgica e immediata, come se ogni scatto raccontasse un momento preciso: lo skate park, una passeggiata tra i fiori, le Alpi… piccoli frammenti di viaggio che si compongono in una griglia ordinata e visivamente equilibrata.<br/><br/>
+            Per rendere l’esperienza più viva, ho integrato transizioni e micro–interazioni tramite JavaScript. Le foto entrano in scena con gradualità, reagiscono al passaggio del mouse e mantengono un ritmo fluido durante lo scorrimento. Tutto è pensato per dare continuità al racconto visivo e rendere la fruizione più naturale.<br/><br/>`,
+        image: "/image/photo-blog.png",
+        media: [
+            { src: "/image/photo-blog/photo-blog.png", caption: "Photo Blog", alt: "Photo Blog" },
+            { src: "/image/photo-blog/photo-blog-panoramica.png", caption: "Panoramica del sito", alt: "Panoramica del sito" },
+            { src: "/image/photo-blog/photo-blog-panoramica-2.png", caption: "Panormica del sito", alt: "Panoramica del sito" },
+            { src: "/image/photo-blog/photo-blog-hover.png", caption: "Effetto hover delle card", alt: "Effetto hover delle card" },
+            { src: "/image/photo-blog/photo-blog-overlay.png", caption: "Effetto overlay sulle immagini", alt: "Effetto overlay sulle immagini" },
+            { src: "/video/photo-blog/photo-blog-video.mp4", caption: "Video - Demo di Photo Blog", alt: "Video - Demo di Photo Blog" },
+        ],
+        technologies: ["JavaScript", "HTML5", "CSS3", "Postman", "GitHub", "Visual Studio Code"],
     }
 ];
 
 export default featuredProjects;
+
+
+
+

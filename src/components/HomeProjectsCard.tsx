@@ -10,6 +10,7 @@ type Project = {
     category: string;
     shortDescription: string;
     image: string;
+    featured?: boolean;
 };
 
 interface HomeProjectsCardProps {
@@ -18,6 +19,8 @@ interface HomeProjectsCardProps {
 }
 
 const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval = 8000 }) => {
+    const featuredProjects = projects.filter(p => p.featured);
+
     const [current, setCurrent] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
 
@@ -29,10 +32,13 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
         return () => clearInterval(timer);
     }, [interval, isPaused, current]);
 
-    const handleNext = () => setCurrent((prev) => (prev + 1) % projects.length);
-    const handlePrev = () => setCurrent((prev) => (prev - 1 + projects.length) % projects.length);
+    const handleNext = () =>
+        setCurrent((prev) => (prev + 1) % featuredProjects.length);
 
-    const project = projects[current];
+    const handlePrev = () =>
+        setCurrent((prev) => (prev - 1 + featuredProjects.length) % featuredProjects.length);
+
+    const project = featuredProjects[current];
 
     const variants = {
         enter: { x: 300, opacity: 0 },
