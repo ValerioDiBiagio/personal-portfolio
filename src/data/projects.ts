@@ -46,6 +46,8 @@ const featuredProjects: Project[] = [
             { src: "/image/portfolio/portfolio-soft-skills-passioni.png", caption: "Le mie soft skills e passioni", alt: "Le mie soft skills e passioni" },
             { src: "/image/portfolio/portfolio-sezione-contatti-hero.png", caption: "Hero della pagina Contatti", alt: "Hero della pagina Contatti" },
             { src: "/image/portfolio/portfolio-form-email.png", caption: "Form per inviare email", alt: "Form per inviare email" },
+            { src: "/video/portfolio/portfolio-video.mp4", caption: "Video - Demo del mio portfolio", alt: "Video - Demo del mio portfolio" },
+            { src: "/video/portfolio/portfolio-responsive-video.mp4", caption: "Video - Versione responsive del mio portfolio", alt: "Video - Versione responsive del mio portfolio" },
         ],
         technologies: ["React", "TypeScript", "HTML5", "CSS3", "Tailwind", "Vite", "GitHub", "Visual Studio Code"],
     },
