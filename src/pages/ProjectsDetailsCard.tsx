@@ -5,7 +5,6 @@ import featuredProjects from "../data/projects";
 // Swiper (carosello)
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -16,8 +15,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 // Importa i loghi con URL
 import { techLogos } from "../data/techLogos";
 
-// Component Banner Tecnologie
-const TechBanner: React.FC<{ technologies: string[] }> = ({ technologies }) => {
+// Tipo per le tecnologie
+type Tech = keyof typeof techLogos;
+
+// Componente Banner Tecnologie
+const TechBanner: React.FC<{ technologies: Tech[] }> = ({ technologies }) => {
     const filtered = technologies
         .map((tech) => techLogos[tech])
         .filter(Boolean);
@@ -77,8 +79,9 @@ const TechBanner: React.FC<{ technologies: string[] }> = ({ technologies }) => {
     );
 };
 
+// Pagina dettagli progetto
 const ProjectDetailsPage: React.FC = () => {
-    const { slug } = useParams();
+    const { slug } = useParams<{ slug: string }>();
     const project = featuredProjects.find((p) => p.slug === slug);
 
     if (!project)
@@ -95,6 +98,11 @@ const ProjectDetailsPage: React.FC = () => {
         );
 
     const mediaGallery = project.media ?? [project.image];
+
+    // Converti le tecnologie in tipo Tech se necessario
+    const techStack: Tech[] = (project.technologies ?? []).filter(
+        (tech): tech is Tech => tech in techLogos
+    );
 
     return (
         <div className="min-h-screen w-full flex flex-col items-center px-4 py-16 bg-black text-white overflow-x-hidden">
@@ -138,7 +146,7 @@ const ProjectDetailsPage: React.FC = () => {
                     spaceBetween={20}
                     slidesPerView={1}
                     className="rounded-3xl overflow-hidden shadow-2xl relative"
-                    style={{ paddingBottom: '4rem' }}
+                    style={{ paddingBottom: "4rem" }}
                 >
                     {mediaGallery.map((item, index) => {
                         let src: string;
@@ -158,7 +166,11 @@ const ProjectDetailsPage: React.FC = () => {
                         return (
                             <SwiperSlide key={index} className="relative">
                                 {src.endsWith(".mp4") ? (
-                                    <video src={src} controls className="w-full h-auto rounded-2xl" />
+                                    <video
+                                        src={src}
+                                        controls
+                                        className="w-full h-auto rounded-2xl"
+                                    />
                                 ) : (
                                     <img
                                         src={src}
@@ -175,10 +187,9 @@ const ProjectDetailsPage: React.FC = () => {
                             </SwiperSlide>
                         );
                     })}
-
                 </Swiper>
 
-                {/* Freccia sinistra */}
+                {/* Frecce */}
                 <motion.button
                     className="custom-swiper-prev absolute left-[-8px] sm:left-[-10px] md:left-[-13px] lg:left-[-80px] top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 md:p-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-cyan-400/20 text-lime-400 transition shadow-lg"
                     whileHover={{ scale: 1.15 }}
@@ -187,7 +198,6 @@ const ProjectDetailsPage: React.FC = () => {
                     <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8" />
                 </motion.button>
 
-                {/* Freccia destra */}
                 <motion.button
                     className="custom-swiper-next absolute right-[-8px] sm:right-[-10px] md:right-[-13px] lg:right-[-80px] top-1/2 -translate-y-1/2 z-20 p-2 sm:p-3 md:p-4 rounded-full backdrop-blur-md bg-white/10 hover:bg-cyan-400/20 text-lime-400 transition shadow-lg"
                     whileHover={{ scale: 1.15 }}
@@ -208,9 +218,7 @@ const ProjectDetailsPage: React.FC = () => {
             </motion.div>
 
             {/* Banner Tecnologie */}
-            {project.technologies && (
-                <TechBanner technologies={project.technologies} />
-            )}
+            {techStack.length > 0 && <TechBanner technologies={techStack} />}
 
             {/* Pulsante torna ai progetti */}
             <motion.div whileHover={{ scale: 1.05 }}>
