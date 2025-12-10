@@ -18,6 +18,61 @@ interface Project {
 
 const featuredProjects: Project[] = [
     {
+        slug: "portfolio-personale",
+        title: "Portfolio Personale",
+        category: "Front-End Development",
+        featured: false,
+        shortDescription:
+            "Sviluppo del mio portfolio personale",
+        longDescription:
+            `Questo progetto è il mio portfolio personale, realizzato con l’obiettivo di presentare il mio lavoro attraverso un’interfaccia moderna, fluida e completamente responsiva.<br/><br/>
+             L’applicazione è costruita con React e TypeScript, una combinazione che mi ha permesso di mantenere un’architettura pulita, facilmente scalabile e fortemente tipizzata.<br/><br/>
+             Per la parte visuale ho scelto Tailwind CSS, che mi ha dato la possibilità di progettare un design consistente e modulare, curando nel dettaglio spacing, colori e transizioni.
+             Il portfolio è organizzato in sezioni ben definite, che scorrono con animazioni morbide e micro-interazioni curate: dal menu allineato con un layout pulito, alla presentazione iniziale con elementi che compaiono in fade-in e slide.<br/><br/>
+             Ogni componente è stato progettato per essere riutilizzabile e facilmente mantenibile.<br/><br/>
+             La sezione dei progetti mette in evidenza card interattive con effetti hover e transizioni fluide, pensate per valorizzare i contenuti senza appesantire l’esperienza utente.<br/><br/>
+             Ho prestato particolare attenzione all’accessibilità e alla leggibilità, utilizzando palette minimali e un design essenziale che mette il contenuto al centro.
+             Complessivamente, questo portfolio rappresenta non solo la mia identità professionale, ma anche il mio modo di concepire lo sviluppo frontend: attenzione al dettaglio, cura dell’esperienza utente e pulizia del codice.<br/><br/>
+             È un progetto che evolve insieme a me, ed è stato progettato per essere facilmente aggiornabile man mano che crescono le mie competenze e i miei lavori.`,
+        image: "/image/portfolio-hero.png",
+        media: [
+            { src: "/image/portfolio/portfolio-hero.png", caption: "Hero section della Home", alt: "Hero section della home" },
+            { src: "/image/portfolio/portfolio-progetti-in-evidenza.png", caption: "Progetti in evidenza", alt: "Progetti in evidenza" },
+            { src: "/image/portfolio/portfolio-contattami.png", caption: "Sezione contattami", alt: "Sezione contattami" },
+            { src: "/image/portfolio/portfolio-sezione-progetti-hero.png", caption: "Hero della pagina Progetti", alt: "Hero della pagina Progetti" },
+            { src: "/image/portfolio/portfolio-sezione-i-miei-progetti.png", caption: "I miei progetti", alt: "I miei progetti" },
+            { src: "/image/portfolio/portfolio-sezione-chi-sono-hero.png", caption: "Hero della pagina Chi Sono", alt: "Hero della pagina Chi Sono" },
+            { src: "/image/portfolio/portfolio-il-mio-percorso-in-breve.png", caption: "Il mio percorso in breve", alt: "Il mio percorso in breve" },
+            { src: "/image/portfolio/portfolio-soft-skills-passioni.png", caption: "Le mie soft skills e passioni", alt: "Le mie soft skills e passioni" },
+            { src: "/image/portfolio/portfolio-sezione-contatti-hero.png", caption: "Hero della pagina Contatti", alt: "Hero della pagina Contatti" },
+            { src: "/image/portfolio/portfolio-form-email.png", caption: "Form per inviare email", alt: "Form per inviare email" },
+        ],
+        technologies: ["React", "TypeScript", "HTML5", "CSS3", "Tailwind", "Vite", "GitHub", "Visual Studio Code"],
+    },
+    {
+        slug: "componente-header",
+        title: "Componente Header",
+        category: "UX/UI Design",
+        featured: true,
+        shortDescription:
+            "Sviluppo di un header UI component per un sito dedicato alla tecnologia.",
+        longDescription:
+            `Ho realizzato un header UI component per un sito web di tecnologia, utilizzando React, TypeScript e Storybook. L’obiettivo del progetto era creare un componente modulare, riutilizzabile e facilmente documentabile, seguendo le best practice dello sviluppo frontend moderno.<br/><br/>
+             Con Storybook ho gestito la documentazione completa del componente, creando una libreria di casi d’uso e varianti, così da garantire che designer e sviluppatori potessero visualizzare e testare le funzionalità in maniera chiara e indipendente dal resto dell’applicazione.<br/><br/>
+             Con React ho implementato la struttura del componente, gestendo la logica interna, lo stato e le interazioni. Ho prestato particolare attenzione alla responsività, assicurando che l’header si adattasse correttamente a diverse risoluzioni e dispositivi, dai desktop ai tablet e mobile.<br/><br/>
+             Durante lo sviluppo, mi sono ispirato ai principi di Atomic Design per creare componenti modulari e scalabili, ai principi di Gestalt per garantire un layout chiaro e intuitivo, e alle linee guida di accessibilità per assicurare che tutti gli utenti potessero navigare facilmente.<br/><br/>
+             Questo progetto mi ha permesso di consolidare competenze nella creazione di componenti UI modulari, responsivi e accessibili, nella documentazione con Storybook e nell’adozione di metodologie di design e sviluppo orientate alla qualità e alla scalabilità del codice.`,
+        image: "/image/header-light-desktop.png",
+        media: [
+            { src: "/image/header-design/light-desktop.png", caption: "Header nella versione desktop light", alt: "Header nella versione desktop light" },
+            { src: "/image/header-design/light-tablet.png", caption: "Header nella versione tablet light", alt: "Header nella versione tablet light" },
+            { src: "/image/header-design/dark-desktop.png", caption: "Header nella versione desktop dark", alt: "Header nella versione desktop dark" },
+            { src: "/image/header-design/dark-tablet.png", caption: "Header nella versione tablet dark", alt: "Header nella versione tablet dark" },
+            { src: "/video/header-design/header-video.mp4", caption: "Video - Demo dell'header", alt: "Video - Demo dell'header" },
+        ],
+        technologies: ["React", "TypeScript", "HTML5", "CSS3", "Bootstrap", "Storybook", "Vite", "GitHub", "Visual Studio Code"],
+    },
+    {
         slug: "top-games",
         title: "Top Games",
         category: "Full Stack Development",
@@ -71,29 +126,6 @@ const featuredProjects: Project[] = [
             { src: "/video/booroad/booroad-video.mp4", caption: "Video - Demo del sito", alt: "Video - Demo del sito" },
         ],
         technologies: ["React", "JavaScript", "HTML5", "CSS3", "Bootstrap", "Vite", "GitHub", "Visual Studio Code"],
-    },
-    {
-        slug: "componente-header",
-        title: "Componente Header",
-        category: "UX/UI Design",
-        featured: true,
-        shortDescription:
-            "Sviluppo di un header UI component per un sito dedicato alla tecnologia.",
-        longDescription:
-            `Ho realizzato un header UI component per un sito web di tecnologia, utilizzando React, TypeScript e Storybook. L’obiettivo del progetto era creare un componente modulare, riutilizzabile e facilmente documentabile, seguendo le best practice dello sviluppo frontend moderno.<br/><br/>
-             Con Storybook ho gestito la documentazione completa del componente, creando una libreria di casi d’uso e varianti, così da garantire che designer e sviluppatori potessero visualizzare e testare le funzionalità in maniera chiara e indipendente dal resto dell’applicazione.<br/><br/>
-             Con React ho implementato la struttura del componente, gestendo la logica interna, lo stato e le interazioni. Ho prestato particolare attenzione alla responsività, assicurando che l’header si adattasse correttamente a diverse risoluzioni e dispositivi, dai desktop ai tablet e mobile.<br/><br/>
-             Durante lo sviluppo, mi sono ispirato ai principi di Atomic Design per creare componenti modulari e scalabili, ai principi di Gestalt per garantire un layout chiaro e intuitivo, e alle linee guida di accessibilità per assicurare che tutti gli utenti potessero navigare facilmente.<br/><br/>
-             Questo progetto mi ha permesso di consolidare competenze nella creazione di componenti UI modulari, responsivi e accessibili, nella documentazione con Storybook e nell’adozione di metodologie di design e sviluppo orientate alla qualità e alla scalabilità del codice.`,
-        image: "/image/header-light-desktop.png",
-        media: [
-            { src: "/image/header-design/light-desktop.png", caption: "Header nella versione desktop light", alt: "Header nella versione desktop light" },
-            { src: "/image/header-design/light-tablet.png", caption: "Header nella versione tablet light", alt: "Header nella versione tablet light" },
-            { src: "/image/header-design/dark-desktop.png", caption: "Header nella versione desktop dark", alt: "Header nella versione desktop dark" },
-            { src: "/image/header-design/dark-tablet.png", caption: "Header nella versione tablet dark", alt: "Header nella versione tablet dark" },
-            { src: "/video/header-design/header-video.mp4", caption: "Video - Demo dell'header", alt: "Video - Demo dell'header" },
-        ],
-        technologies: ["React", "TypeScript", "HTML5", "CSS3", "Bootstrap", "Storybook", "Vite", "GitHub", "Visual Studio Code"],
     },
     {
         slug: "photo-blog",
