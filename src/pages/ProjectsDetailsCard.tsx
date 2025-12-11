@@ -218,7 +218,11 @@ const ProjectDetailsPage: React.FC = () => {
             </motion.div>
 
             {/* Banner Tecnologie */}
-            {techStack.length > 0 && <TechBanner technologies={techStack} />}
+            <div className="relative overflow-hidden w-[90%] sm:w-[90%] md:w-[90%] lg:w-[90%] p-4">
+                <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-black to-transparent z-10"></div>
+                <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-black to-transparent z-10"></div>
+                {techStack.length > 0 && <TechBanner technologies={techStack} />}
+            </div>
 
             {/* Pulsante torna ai progetti */}
             <motion.div whileHover={{ scale: 1.05 }}>
