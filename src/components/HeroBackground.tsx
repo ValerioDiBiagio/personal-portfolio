@@ -51,9 +51,8 @@ const HeroBackground: React.FC = () => {
                         filter: `drop-shadow(0 0 6px ${p.color})`,
                     }}
                     animate={{
-                        // movimento continuo in tutte le direzioni
-                        x: ["0vw", `${Math.random() * 200 - 100}vw`],
-                        y: ["0vh", `${Math.random() * 200 - 100}vh`],
+                        x: [-150, 150],
+                        y: [-150, 150],
                         opacity: [1, 0.6, 1],
                     }}
                     transition={{

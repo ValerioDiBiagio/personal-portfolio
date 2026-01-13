@@ -47,7 +47,7 @@ const HomeProjectsCard: React.FC<HomeProjectsCardProps> = ({ projects, interval 
     };
 
     return (
-        <div className="relative pb-16 bg-black mt-20">
+        <div className="relative pb-16 bg-black mt-20 overflow-hidden">
             <div className="w-full py-15 text-center">
                 <h2 className="text-gray-300 text-2xl sm:text-3xl md:text-4xl font-semibold">
                     Progetti in evidenza
