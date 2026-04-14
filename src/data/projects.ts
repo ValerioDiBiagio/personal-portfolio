@@ -18,6 +18,29 @@ interface Project {
 
 const featuredProjects: Project[] = [
     {
+        slug: "watch-cards",
+        title: "Watch Cards",
+        category: "UX/UI Design",
+        featured: true,
+        shortDescription:
+            "Sviluppo di cards per un e-commerce di orologi da polso",
+        longDescription:
+            `Per questo progetto ho sviluppato un sistema di Product Card dedicato a un e-commerce di orologeria di lusso, utilizzando React, TypeScript e Storybook. L’obiettivo principale era creare un’interfaccia che riflettesse l'eleganza e la precisione dei prodotti esposti, garantendo al contempo una struttura tecnica solida e scalabile.<br/><br/>
+            Seguendo i principi dell’Atomic Design, ho scomposto l’interfaccia in componenti modulari: partendo dagli atomi (come badge di stato e pulsanti "Add to cart") fino ad arrivare all'organismo completo della card. Questo approccio mi ha permesso di gestire con estrema facilità la complessità visiva, assicurando che ogni elemento fosse riutilizzabile e coerente in tutta l'applicazione.<br/><br/>
+            Attraverso Storybook, ho creato una documentazione interattiva completa, isolando i componenti per testarne il comportamento in diversi scenari. Ho implementato una gestione dinamica dei temi, permettendo all'utente di switchare istantaneamente tra Light e Dark Mode, verificando che il contrasto e l'estetica rimanessero impeccabili in ogni condizione cromatica.<br/><br/>
+            Nella realizzazione della logica, ho prestato particolare attenzione agli stati del prodotto: dalla gestione degli sconti calcolati dinamicamente nei badge, fino alla gestione dello stato "out of stock", dove il componente adatta visivamente le sue interazioni per guidare l'utente in modo intuitivo.<br/><br/>
+            Questo lavoro mi ha permesso di affinare le mie competenze nella creazione di Design System complessi, focalizzandomi sulla scrittura di codice pulito e tipizzato con TypeScript e sull'adozione di metodologie UX/UI (come i principi della Gestalt) per garantire un layout bilanciato, accessibile e orientato alla conversione.`,
+        image: "/image/watch-cards-light.png",
+        media: [
+            { src: "/image/watchcards/cards-light.png", caption: "Anteprima delle card in light mode", alt: "Anteprima delle card in light mode" },
+            { src: "/image/watchcards/cards-dark.png", caption: "Anteprima delle card in dark mode", alt: "Anteprima delle card in dark mode" },
+            { src: "/image/watchcards/cards-badges.png", caption: "Componenti badge delle card", alt: "Componenti badge delle card" },
+            { src: "/image/watchcards/cards-buttons.png", caption: "Componenti button delle card", alt: "Componenti button delle card" },
+            { src: "/video/watchcards/watch-cards-video.mp4", caption: "Video - Demo delle card", alt: "Video - Demo delle card" },
+        ],
+        technologies: ["React", "TypeScript", "HTML5", "CSS3", "Storybook", "Vite", "GitHub", "Visual Studio Code"],
+    },
+    {
         slug: "portfolio-personale",
         title: "Portfolio Personale",
         category: "Front-End Development",
